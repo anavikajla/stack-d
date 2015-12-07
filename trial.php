@@ -125,7 +125,7 @@ session_start();
 <p id="head1">Add a book to your Bookshelf</p>
 
 		
-			<form method="post" class="block form-horizontal" enctype="multipart/form-data" action="<?php echo $_SERVER["PHP_SELF"];?>">
+			<form method="post" class="block form-horizontal" enctype="multipart/form-data" action="<?php echo $_SERVER['PHP_SELF'];?>">
 					<input type="number" name="isbn" id="isbn" align="middle" class="box" placeholder="ISBN" list="suggestions" oninput="fetch()" autocomplete="off"><br>
 					<input type="text" name="bname" class="box" placeholder="Book Name" required><br>
 					<input type="text" name="author" class="box" placeholder="Author" required><br>

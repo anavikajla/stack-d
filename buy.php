@@ -49,7 +49,7 @@ session_start();
  	</div>
 	
 	<div class="header">
-		<p id="heading_top">BUY<p>
+		<p id="heading_top">Buy/Rent In<p>
 	</div>
 	
 	<div id="wrapper">
@@ -81,7 +81,7 @@ session_start();
 						
 						echo "</div>";
 						
-						echo "<form method='post' action='book_profile.php' id='{$form_number}'> 
+						echo "<form method='post' action='book_profile_buy.php' id='{$form_number}'> 
 							<input name='image' value='http://d28hgpri8am2if.cloudfront.net/book_images/cvr9780743482820_9780743482820_hr.jpg' hidden>
 							<input name='book_name' value='{$singlebook['book_name']}' hidden>
 							<input name='author' value='{$singlebook['author']}' hidden>
