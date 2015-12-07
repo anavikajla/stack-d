@@ -113,7 +113,7 @@ session_start();
  					    <li><a href="#">Address</a></li> 
  					  </ul>
  				</li>
- 				<li><form action="signout.php" method="post"><input type="submit" class="btn btn-primary" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
+ 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  			</ul>
  		</div>
  	</div>
