@@ -83,7 +83,7 @@
 				<li><a href="page_one.html">Home</a></li>
 				<li><a href="about_us.html">About Us</a></li>
 				<li><a href="team.html">Team</a></li>
-				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>		
+					
 			</ul>
 		
 			<ul class="pull-right">
@@ -98,6 +98,7 @@
 					    <li><a href="#">Address</a></li>
 						
 					  </ul>
+					  <li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>	
 				</li>
 			</ul>
 		</div>
