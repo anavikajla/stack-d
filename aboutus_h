@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+			<meta charset="utf-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>About Us</title>
+			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+			<link type="text/css" rel="stylesheet" href="css/bootstrap.css">
+			<link type="text/css" rel="stylesheet" href="trial.css">
+			<link type="image/x-icon" rel="icon" href="favicon1.ico">
+</head>
+
+<body>
+ 	<div class="nav">
+ 		<div class="container">
+ 			<ul class="pull-left">
+ 				<li><a href="home.html">Home</a></li>
+ 				<li><a href="about_us.html">About Us</a></li>
+ 				<li><a href="teamh.html">Team</a></li>
+				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback  Form</a></li> 		
+ 			</ul>
+		
+ 			<ul class="pull-right">
+ 				<li><a href="login_page.html">Login/Sign-Up</a></li>			
+ 				<li class="dropdown">
+ 					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+ 						  Contact Us<span class="caret"></span></a>
+				  
+ 					  <ul class="dropdown-menu">
+ 					    <li><a href="#">Email</a></li>
+ 					    <li><a href="#">Facebook</a></li>
+ 					    <li><a href="#">LinkedIn</a></li>
+ 					    <li><a href="#">Address</a></li>
+ 						
+ 					  </ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+	
+	<div class="header">
+		<p id="heading_top">Ashoka Stack'd<p>
+	</div>
+	
+	<div class="text_box">
+		<p>We are a website trying to reduce the book costs faced by students in their day to day college lives.<br>Moreover,we also aim to help students share their resources by providing a platform to share their notes.<br>Through the website, you can:</p>
+		<ul>
+				<li><strong>Buy</strong></li>
+				<li><strong>Sell</strong></li>
+				<li><strong>Rent In</strong></li>
+				<li><strong>Rent Out</strong></li>
+				
+		</ul>
+		<p>Instead of telling you what price you ought to sell your books at, we let <strong>you</strong> set a suitable price yourself, so that you decide what the best deal is! So, go ahead try to buy/sell/rent a book yourself!<br><br>
+		You can purchase and sell any genre of book, whether it be that incredibly expensive economics textbook or the latest book by your favourite author you've been waiting to get your hands on(but your pocket money was running a little low). No worries, we got you covered.What's more, it's an Ashoka only website! You get all seller details on - site and all you have to do is e-mail and get in touch! Which means it's trusted first!<br>
+		So, if you find yourself convinced by what we're offering, go ahead and give us a try! #stackd 
+		</p>
+	</div>	
+	
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+</body>
+</html>
