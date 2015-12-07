@@ -1,0 +1,34 @@
+	font-family: Verdana,sans-serif;
+  	font-style: normal;
+}
+
+.nav a {
+  color:black; /*#00b0ff #4dc8ff #5a5a5a*/
+  font-size: 12px;
+  font-weight: bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav li {
+  display: inline;
+}
+
+.row{
+	padding-top:40px;
+}
+
+.row p{
+	padding-top:20px;
+	padding-right:15px;
+}
+
+.intro{
+	background-color:grey;
+}
+
+.dropdown{
+	position:relative;
+	display:inline;
+}
+	

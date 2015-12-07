@@ -1,0 +1,283 @@
+body {
+	font-family:Verdana;
+	/*background: url(http://subtlepatterns.com/patterns/scribble_light.png) ;*/
+}
+
+#wrapper {
+	width: 90%;
+	max-width: 1100px;
+	min-width: 800px;
+	margin: 50px auto;
+}
+
+#columns {
+	-webkit-column-count: 3;
+	-webkit-column-gap: 10px;
+	-webkit-column-fill: auto;
+	-moz-column-count: 3;
+	-moz-column-gap: 10px;
+	-moz-column-fill: auto;
+	column-count: 3;
+	column-gap: 15px;
+	column-fill: auto;
+}
+
+.pin {
+	display: inline-block;
+	background: #FEFEFE;
+	border: 2px solid #FAFAFA;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	-webkit-column-break-inside: avoid;
+	-moz-column-break-inside: avoid;
+	column-break-inside: avoid;
+	padding: 15px;
+	padding-bottom: 5px;
+	background: -webkit-linear-gradient(45deg, #FFF, #F9F9F9);
+	opacity: 1;
+	
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+
+.pin img {
+	width: 100%;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 15px;
+	margin-bottom: 5px;
+}
+
+.pin p {
+	font: 12px/18px Arial, sans-serif;
+	color: #333;
+	margin: 0;
+}
+
+@media (min-width: 960px) {
+	#columns {
+		-webkit-column-count: 4;
+		-moz-column-count: 4;
+		column-count: 4;
+	}
+}
+
+@media (min-width: 1100px) {
+	#columns {
+		-webkit-column-count: 5;
+		-moz-column-count: 5;
+		column-count: 5;
+	}
+}
+
+#columns:hover .pin:not(:hover) {
+	opacity: 0.4;
+}
+
+.nav a {
+  color:#5a5a5a; /* #3f3f3f#00b0ff #4dc8ff #5a5a5a*/
+  font-size: 13px;
+  font-weight:bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav a:hover{
+	font-weight:bold;
+	color:#00b0ff;
+}
+
+.nav li {
+  display: inline;
+}
+
+.container{
+	margin-top:1%;
+
+}
+
+div {
+	border-radius: 5px;
+}
+
+.block{
+	margin-top:-1em;
+}
+#head1{
+	text-align:center;
+	font-size:2.6em;
+	color:#000000;
+	font-family:Arial;
+	margin-top:1em;
+}
+
+#head2{
+	text-align:center;
+	font-size:1.3em;
+	font-weight:bold;
+	color:#000000;
+}
+
+.right p {
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: -10px;
+	font-family: Garamond, serif;
+	color: #000000;
+}
+
+.left {
+	position: relative;
+	float: left;
+	margin-top: 50px;
+	width: 12%;
+	height: 400px;
+	background-color: #e5e5e5;
+	margin-bottom: 10px;
+}
+
+.right {
+	position: relative;
+	float: right;
+	margin-top: 50px;
+	width: 88%;
+	height: 400px;
+	background-color: #ffffff;
+	margin-bottom: 10px;
+}
+
+.box{
+	background-color:#ffffff;
+	color:#000000;
+	border-radius:5px;
+	border:2px solid #e5e5e5;
+	height:2.3em;
+	width:30em;
+	margin-top:1.5em;
+	margin-left:30em;
+}
+
+.box:hover{
+	border:solid 3px #87CEEB;
+}
+
+#comment_box{
+	background-color:#ffffff;
+	color:#000000;
+	border-radius:5px;
+	border:2px solid #e5e5e5;
+	height:8em;
+	width:30em;
+	margin-top:1.5em;
+	margin-left:30em;
+}
+
+.btn{
+	align:center;
+	margin-top:1em;
+	margin-left:auto;
+	margin-right:auto;
+}
+
+#search{
+	align:center;
+	width:50%;
+	height:3.3em;
+	margin-left:15em;
+}
+
+#search:hover{
+	font-weight:bold;
+	border:solid 3px #87CEEB;
+}
+
+.header{
+		height: 7em;
+		width:50%;
+		align:center;
+		background-color: #32CD99; /*#4682B4*/
+		border-radius:0.5em;
+		margin-bottom: 20px;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:1em;
+		vertical-align:middle;
+		text-align:center;
+		
+}
+	
+#heading_top{
+	font-size:3.5em;
+	text-align:center;
+	font-weight:bold;
+	padding-top:0.25em;
+	color:#ffffff;
+}
+
+.upload{
+	margin-top:1em;
+	margin-left:30em;
+}
+
+.text_box{
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:5em;
+	height:40em;
+	width:80%;
+	background-color:#e5e5e5;
+}
+
+.text_box p{
+	font-size:1.3em;
+	color:#000000;
+	padding-left:3em;
+	padding-right:3em;
+	padding-top:1em;	
+}
+
+.text_box ul{
+	font-size:1.3em;
+	color:#000000;
+	padding-left:5em;
+}
+
+.team{
+	margin-right:auto;
+	margin-left:auto;
+	margin-top:5em;
+	height:8em;
+	width:80%;
+	background-color:#e5e5e5;
+}
+
+.team p{
+	font-size:1.3em;
+	color:#000000;
+	padding-left:3em;
+	padding-right:3em;
+	padding-top:1em;	
+}
+
+.team a{
+	color:#00b0ff;
+}
+
+.left_bar a{
+	color:black;
+	font-size:2em;
+	list-style-type:none;
+}
+.left_bar a:hover{
+	color:##00b0ff;
+}
+
+/*for check box*/
+.check_box{
+	margin-top:1.5em;
+	margin-left:30em;
+	display:inline-block;
+	vertical-align:middle;
+	text-align:center;
+}
