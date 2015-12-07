@@ -78,13 +78,13 @@
 	<div class="nav" role="navigation">
 		<div class="container">
 			<ul class="pull-left">
+				<li><a href="page_one.html">About Us</a></li>
 				<li><a href="about_us.html">About Us</a></li>
 				<li><a href="team.html">Team</a></li>
-				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>		
 			</ul>
 		
 			<ul class="pull-right">
-				
+				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>
 				<li class="dropdown">
 					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
 						  Contact Us<span class="caret"></span></a>				  
