@@ -36,7 +36,7 @@ session_start();
  					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
  					  <ul class="dropdown-menu">
- 					    <li><a href="mailto:anavi.kajla@ashoka.edu.in,mihika.sood@ashoka.edu.in">Email</a></li>
+ 					    <li><a href="mailto:anavi.kajla@ashoka.edu.in,mihika.sood@ashoka.edu.in,paras.bhattrai@ashoka.edu.in">Email</a></li>
  					    <li><a href="#">Facebook</a></li>
  					    <li><a href="#">LinkedIn</a></li>
  					    <li><a href="#">Address</a></li>
@@ -75,7 +75,7 @@ session_start();
 						echo "<p><strong>Author:</strong><span name='author'>{$singlebook['author']}</span></p>";
 						echo "<p><strong>Publisher:</strong><span name='subject'>{$singlebook['subject']}</span></p>";
 						echo "<p><strong>Edition:</strong><span name='edition'>{$singlebook['edition']}</span></p>";
-						echo "<p><a href='' class='btn btn-primary' role='button'>Sell</a> <a href='' class='btn btn-default' role='button'>Rent Out</a></p>";
+						//echo "<p><a href='' class='btn btn-primary' role='button'>Sell</a> <a href='' class='btn btn-default' role='button'>Rent Out</a></p>";
 						
 						echo "</div>";
 						
