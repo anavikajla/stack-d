@@ -60,7 +60,7 @@ session_start();
 			{	
 				//echo "<h3>SEARCH RESULTS</h3>";
 				$present_search=htmlspecialchars($_POST['search']);
-				$select=$db->prepare("SELECT `isbn`,`book_name`,`author`,`subject`,`edition`,`rent`,`note_one`,`note_one_path`,`note_two`,`note_two_path` FROM books WHERE `book_name` LIKE '{$present_search}' OR `author` LIKE '{$present_search}' OR `isbn` LIKE '{$present_search}';");
+				$select=$db->prepare("SELECT `isbn`,`book_name`,`author`,`subject`,`edition`,`rent`,`sell`,`note_one`,`note_one_path`,`note_two`,`note_two_path` FROM books WHERE `book_name` LIKE '{$present_search}' OR `author` LIKE '{$present_search}' OR `isbn` LIKE '{$present_search}';");
 				$select->execute();
 				$mybooks=$select->fetchAll();
 				$form_number=0;
@@ -81,9 +81,27 @@ session_start();
 						
 						echo "</div>";
 						
-						echo "<form method='post' action='book_profile_buy.php' id='{$form_number}'> 
-							<input name='image' value='http://d28hgpri8am2if.cloudfront.net/book_images/cvr9780743482820_9780743482820_hr.jpg' hidden>
+						echo "<form method='post' action='book_profile_buy.php' id='{$form_number}'> ";
+						//image
+						if($singlebook['note_one']!="none")
+						echo "<input name='image' value='book_images/{$singlebook['note_one_path']}{$singlebook['note_one']}' hidden/>";
+						else
+						echo "<input name='image' value='http://www.islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg' hidden/>";
+						//for notes
+						if($singlebook['note_two']!="none")
+						{
+							echo "<input name='note' value='resources/{$singlebook['note_two_path']}{$singlebook['note_two']}' hidden/>";
+							echo "<input name='note_name' value='{$singlebook['note_two']}' hidden/>";
+						}	
+						else
+						echo "<input name='note' value='none' hidden/>";
+						
+						
+						echo	"<input name='image' value='http://d28hgpri8am2if.cloudfront.net/book_images/cvr9780743482820_9780743482820_hr.jpg' hidden>
+							<input name='isbn' value='{$singlebook['isbn']}' hidden>
 							<input name='book_name' value='{$singlebook['book_name']}' hidden>
+							<input name='rent' value='{$singlebook['rent']}' hidden>
+							<input name='sell' value='{$singlebook['sell']}' hidden>
 							<input name='author' value='{$singlebook['author']}' hidden>
 							<input name='subject' value='{$singlebook['subject']}' hidden>
 							<input name='edition' value='{$singlebook['edition']}' hidden>

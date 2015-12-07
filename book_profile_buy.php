@@ -20,12 +20,12 @@ session_start();
  		<div class="container">
  			<ul class="pull-left">
  				<li><a href="home.php">Home</a></li>
- 				<li><a href="about_us_h.html">About Us</a></li>
- 				<li><a href="team_h.html">Team</a></li>
+ 				<li><a href="about_us.html">About Us</a></li>
+ 				<li><a href="team.html">Team</a></li>
  			</ul>
 		
  			<ul class="pull-right">
- 				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>
+ 				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>			
  				<li class="dropdown">
  					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
@@ -34,16 +34,11 @@ session_start();
  					    <li><a href="#">Facebook</a></li>
  					    <li><a href="#">LinkedIn</a></li>
  					    <li><a href="#">Address</a></li> 
- 					    
- 					 </ul>
- 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
- 			</ul>
-				
- 		</div>
- 	</div>
+ 					  </ul>
  				</li>
- 			</ul>
-					
+ 			
+			<li><form action="signout.php" method="post" style="display:inline-block;"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
+			</ul>		
  		</div>
  	</div>
 	
@@ -52,43 +47,50 @@ session_start();
 	</div>
 
 <div class="media">
-	<img src='<?php echo $_POST['image'];?>' class='img-thumbnail img_size' />
-    
+	<img src="<?php echo htmlspecialchars($_POST['image']);?>" class='img-thumbnail img_size' />
 	<div style="display:inline-block; vertical-align:right; margin-left:15%;">
-		<h2><strong><?php echo htmlspecialchars($_POST['book_name']);?></strong></h2>
+		<h2><strong><?php echo $_POST['book_name'];?></strong></h2>
 		<h4 style="color:grey"><?php echo htmlspecialchars($_POST['author']);?></h4>
-    <h4 style="color:grey"><strong>ISBN:</strong></h4>
-    <p><strong>Publisher:</strong><?php echo htmlspecialchars($_POST['subject']);?></p>
+		<h4 style="color:grey"><?php echo 'ISBN : '.htmlspecialchars($_POST['isbn']);?></h4>
+		<br>
+		<p><strong>Publisher:</strong><?php echo htmlspecialchars($_POST['subject']);?></p>
+		<br>
 		<p><strong>Edition:</strong><?php echo htmlspecialchars($_POST['edition']);?></p>
-		<p style="color:grey"><strong>Buying Price:</strong></p>
-		<p style="color:grey"><strong>Renting Price:</strong></p>
+		<br>
+		
+		<p><strong>Rent price:</strong><?php echo htmlspecialchars($_POST['rent']);?></p>
+		<br>
+		<p><strong>Sale Price:</strong><?php echo htmlspecialchars($_POST['sell']);?></p>
+		<br>
 		
 		<p><strong>Seller id:</strong>
 				<?php
 				
 					//to produce user email
-					$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","");
+					$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","server");
 					$select=$db->prepare("SELECT `email` FROM `book_sharing`.`users` where `db_user_id`={$_SESSION['db_user_id']};");
 					$select->execute();
 					$result=$select->fetch();
 					echo $result[0];
 					$db=null;
 				?>
-				
-		
-		
-		</p>
-		
+		<br><br>
 		<h4 style="color:grey">Notes</h4>
-		<p><strong>Notes attached:</strong></p>
-		  /*link*/
-	</div>
-</div>
-
+		
+		<p><?php 
+		if($_POST['note']!='none')
+		echo "<a href='{$_POST['note']}'> {$_POST['note_name']} </a>";
+		else
+		echo "Not available";
+		?>
+		</p>
+		<br><br>
 <form action="buy_redirect.html">
 			<input type="button" class="btn btn-primary" value="Buy">
    	 	<input type="button" class="btn btn-primary" value="Rent">
 		</form><br>
+	</div>
+</div>
 
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	    <!-- Include all compiled plugins (below), or include individual files as needed -->
