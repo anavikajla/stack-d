@@ -31,8 +31,8 @@ session_start();
  			</ul>
 		
  			<ul class="pull-right">
- 					
-				<li><a href="login_page.html">Login/Sign-Up</a></li>			
+ 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
+				<li><a href="home.html.html">Login/Sign-Up</a></li>			
  				<li class="dropdown">
  					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
@@ -43,7 +43,7 @@ session_start();
  					    <li><a href="#">Address</a></li>
  					  </ul>
  				</li>
-				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>		
+					
  			</ul>
  		</div>
  	</div>
