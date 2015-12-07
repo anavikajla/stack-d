@@ -36,7 +36,7 @@
  					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
  					  <ul class="dropdown-menu">
- 					    <li><a href="mailto:anavi.kajla@ashoka.edu.in">Email</a></li>
+ 					    <li><a href="mailto:anavi.kajla@ashoka.edu.in,mihika.sood@ashoka.edu.in">Email</a></li>
  					    <li><a href="#">Facebook</a></li>
  					    <li><a href="#">LinkedIn</a></li>
  					    <li><a href="#">Address</a></li>
@@ -62,7 +62,7 @@
 	-->
 	<a href="pin.php"><button type="button" class="btn btn-info">My Bookshelf</button></a>
 	<a href="trial.php"><button type="button" class="btn btn-info">Add to Bookshelf</button></a>
-	<a href="buy_search.html"><button type="button" class="btn btn-info">Buy</button></a>
+	<a href="buy_search.html"><button type="button" class="btn btn-info">Buy/Rent</button></a>
 	
 	<button type="button" class="btn btn-info">Sell</button>
 	<button type="button" class="btn btn-info">Rent In</button>
