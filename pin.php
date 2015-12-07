@@ -28,10 +28,11 @@ session_start();
  				<li><a href="home.php">Home</a></li>
  				<li><a href="about_us.html">About Us</a></li>
  				<li><a href="team.html">Team</a></li>	
-				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>	
+				
  			</ul>
 		
- 			<ul class="pull-right">		
+ 			<ul class="pull-right">	
+ 				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>		
  				<li class="dropdown">
  					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
@@ -42,9 +43,8 @@ session_start();
  					    <li><a href="#">Address</a></li> 
  					  </ul>
  				</li>
+ 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  			</ul>
-			
-				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>		
  		</div>
  	</div>
 	
@@ -73,10 +73,12 @@ session_start();
 						else
 						echo "<img src='http://d28hgpri8am2if.cloudfront.net/book_images/cvr9780743482820_9780743482820_hr.jpg' />";
 						
-						echo "<h1 name='book_name'>{$singlebook['book_name']}</h1>";
+						echo "<h4 name='book_name'>{$singlebook['book_name']}</h4>";
 						echo "<p><strong>Author:</strong><span name='author'>{$singlebook['author']}</span></p>";
 						echo "<p><strong>Publisher:</strong><span name='subject'>{$singlebook['subject']}</span></p>";
 						echo "<p><strong>Edition:</strong><span name='edition'>{$singlebook['edition']}</span></p>";
+						echo "<p><strong>Renting In Price:</strong><span name='rent'>{$singlebook['rent']}</span></p>";
+						echo "<p><strong>Selling Price:</strong><span name='sell'>{$singlebook['sell']}</span></p>";
 						//echo "<p><a href='' class='btn btn-primary' role='button'>Sell</a> <a href='' class='btn btn-default' role='button'>Rent Out</a></p>";
 						
 						echo "</div>";
