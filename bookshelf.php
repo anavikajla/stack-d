@@ -31,7 +31,7 @@ session_start();
  			</ul>
 		
  			<ul class="pull-right">
- 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
+ 				
 				<li><a href="home.html.html">Login/Sign-Up</a></li>			
  				<li class="dropdown">
  					  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">
@@ -42,7 +42,7 @@ session_start();
  					    <li><a href="#">LinkedIn</a></li>
  					    <li><a href="#">Address</a></li>
  					  </ul>
- 					  <li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
+ 			<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  			</ul>
 				
  		</div>
