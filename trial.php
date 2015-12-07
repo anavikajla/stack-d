@@ -97,13 +97,12 @@ session_start();
  		<div class="container">
  			<ul class="pull-left">
  				<li><a href="home.php">Home</a></li>
- 				<li><a href="about_us.html">About Us</a></li>
- 				<li><a href="team.html">Team</a></li>	
-				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>	
+ 				<li><a href="about_us_h.html">About Us</a></li>
+ 				<li><a href="team_h.html">Team</a></li>	
  			</ul>
 		
  			<ul class="pull-right">
- 				<li><a href="login_page.php">Login/Sign-Up</a></li>			
+ 				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>	
  				<li class="dropdown">
  					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
@@ -114,6 +113,7 @@ session_start();
  					    <li><a href="#">Address</a></li> 
  					  </ul>
  				</li>
+ 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  			</ul>
  		</div>
  	</div>
@@ -132,7 +132,7 @@ session_start();
 					<input type="text" name="edition" class="box" placeholder="Edition"><br>
 					<input type="text" name="publisher" class="box" placeholder="Publisher"><br>
 					<input type="number" name="rent" class="box" placeholder="Rent at &#8377; (default is not for rent)" min="0"><br>
-					<input type="text" name="sell" class="box" placeholder="Sell At &#8377; (default is not for sale)" min="0"><br>
+					<input type="number" name="sell" class="box" placeholder="Sell At &#8377; (default is not for sale)" min="0"><br>
 					<input type="hidden" name="MAX_FILE_SIZE" value="9000000">
 					<input type="file" class="upload" name="upload1" style="display:inline-block;"> Upload an image<br>
 					<input type="hidden" name="MAX_FILE_SIZE" value="9000000">
