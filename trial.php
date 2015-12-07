@@ -1,5 +1,11 @@
 <?php
 session_start();
+ if(!isset($_SESSION['db_user_id']))
+ {
+	header('Location: login_page.php');
+	exit;
+ }	
+
 //upload page
 	if(isset($_POST['submit']))
 	{

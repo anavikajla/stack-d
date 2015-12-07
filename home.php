@@ -64,7 +64,7 @@
 	-->
 	<a href="pin.php"><button type="button" class="btn btn-info">My Bookshelf</button></a>
 	<a href="trial.php"><button type="button" class="btn btn-info">Add to Bookshelf</button></a>
-	<a href="buy_search.html"><button type="button" class="btn btn-info">Buy/Rent</button></a>
+	<a href="buy_search.php"><button type="button" class="btn btn-info">Buy/Rent</button></a>
 	
 
 	
