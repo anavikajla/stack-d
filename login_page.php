@@ -4,6 +4,7 @@
 				$db=new PDO("mysql:host=localhost;dbname=book_sharing","root","");
 		$uname=htmlspecialchars($_POST['uname']);
 		$upass=htmlspecialchars($_POST['upass']);
+		$upass=hash('sha512',$upass);
 		$data=$db->prepare("SELECT `db_user_id` FROM `users` WHERE `email` LIKE '{$uname}' AND `password` LIKE '{$upass}';");
 		$data->execute();
 		$isuser=$data->fetch();
@@ -30,6 +31,7 @@
 			$slast=htmlspecialchars($_POST['slast']);
 			$semail=htmlspecialchars($_POST['semail']);
 			$spass=htmlspecialchars($_POST['spass']);
+			$spass=hash('sha512',$spass);
 			$loop=true;
 			 while($loop)
 			 {
@@ -44,7 +46,7 @@
 			
 			//echo "signed up |||";
 			//after signup redirect user to bookshelf
-			$data=$db->prepare("SELECT `db_user_id` FROM `users` WHERE `email` LIKE '{$uname}' AND `password` LIKE '{$upass}';");
+			$data=$db->prepare("SELECT `db_user_id` FROM `users` WHERE `email` LIKE '{$semail}' AND `password` LIKE '{$spass}';");
 			$data->execute();
 			$isuser=$data->fetch();
 		//print_r($isuser);
@@ -78,13 +80,13 @@
 	<div class="nav" role="navigation">
 		<div class="container">
 			<ul class="pull-left">
-				<li><a href="page_one.html">About Us</a></li>
 				<li><a href="about_us.html">About Us</a></li>
 				<li><a href="team.html">Team</a></li>
+				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>		
 			</ul>
 		
 			<ul class="pull-right">
-				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>
+				
 				<li class="dropdown">
 					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
 						  Contact Us<span class="caret"></span></a>				  
