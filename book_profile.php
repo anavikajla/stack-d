@@ -37,7 +37,7 @@ session_start();
  					  </ul>
  				</li>
  			
-			<li><form action="signout.php" method="post" style="display:inline-block;"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
+			<li><form action="signout.php" method="post" style="display:inline-block;"><input type="submit" value="Sign out" class="btn btn-primary" style="display:inline-block;position:relative;float:right;"></form></li>
 			</ul>		
  		</div>
  	</div>
