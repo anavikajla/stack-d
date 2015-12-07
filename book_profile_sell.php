@@ -59,7 +59,7 @@ session_start();
 		<p><strong>Renting Out Price:</strong></p>
 		
 		
-		<p><strong>Seller id:</strong>
+		/*<p><strong>Seller id:</strong>
 				<?php
 				
 					//to produce user email
@@ -73,12 +73,12 @@ session_start();
 				
 		
 		
-		</p>
+		</p>*/
 		
 		
 		<h4 style="color:grey">Notes</h4>
 		<p><strong>Notes attached:</strong></p>
-		 /*link*/
+		 /*link for preview*/
 		
 	</div>
 </div>
