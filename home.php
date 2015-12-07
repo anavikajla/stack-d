@@ -42,8 +42,9 @@
  					    <li><a href="#">Address</a></li>
  						<li><a href="#">Contact Form</a></li> 
  					  </ul>
+ 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  				</li>
- 				 <li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
+ 				 
  			</ul>
  		</div>
  	</div>
