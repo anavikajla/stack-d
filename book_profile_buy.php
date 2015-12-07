@@ -79,10 +79,6 @@ session_start();
 		
 		</p>
 		
-		
-		
-		
-		
 		<h4 style="color:grey">Notes</h4>
 		<p><strong>Notes attached:</strong></p>
 		  /*link*/
