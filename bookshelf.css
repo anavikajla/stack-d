@@ -1,0 +1,95 @@
+body{
+	font-family: Verdana,sans-serif;
+  	font-style: normal;
+}
+
+.nav a {
+  color:#5a5a5a; /* #3f3f3f#00b0ff #4dc8ff #5a5a5a*/
+  font-size: 13px;
+  font-weight:bold;
+  padding: 14px 10px;
+  text-transform: uppercase;
+}
+
+.nav a:hover{
+	color:#00b0ff;
+}
+
+.nav li {
+  display: inline;
+}
+
+.container{
+	margin-top:1%;
+}
+
+.dropdown-menu a{
+	text-transform:capitalize;
+}
+#search{
+	align:center;
+	width:50%;
+	height:3.3em;
+	margin-left:15em;
+}
+
+#search:hover{
+	font-weight:bold;
+	border:solid 3px #87CEEB;
+}
+
+.header{
+		height: 7em;
+		width:50%;
+		align:center;
+		background-color: #3299CC; /*#4682B4*/
+		border-radius:0.5em;
+		margin-bottom: 20px;
+		margin-left:auto;
+		margin-right:auto;
+		margin-top:1em;
+}
+	
+#heading_top{
+	font-size:3.5em;
+	text-align:center;
+	font-weight:bold;
+	padding-top:0.25em;
+	color:#ffffff;
+}
+
+.btn{
+	display:inline;
+	color:#ffffff;
+	width:6em;
+	height:2em;
+	font-weight:bold;
+	font-size:1.1sem;
+	text-align:center;	
+	margin-left:0em;
+	background-color:#32CD99;
+	border:none;
+	border-radius:0.3em;	
+}
+
+.options{
+	position:relative;
+	display:inline-block;	
+}
+
+.table{
+	width:70%;
+	height:100%;
+	vertical-align:middle;
+	margin-left:17%;
+}
+
+.table th{
+	height:5em;
+}
+.table td{
+	height:8em;
+}
+.img{
+	width:20%;
+}

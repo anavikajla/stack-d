@@ -1,0 +1,93 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+			<meta charset="utf-8">
+		    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+		    <meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Add a book</title>
+			<link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+			<link type="text/css" rel="stylesheet" href="trial.css">
+			<link type="image/x-icon" rel="icon" href="favicon1.ico">
+</head>
+
+<body>
+ 	<div class="nav">
+ 		<div class="container">
+ 			<ul class="pull-left">
+ 				<li><a href="home.html">Home</a></li>
+ 				<li><a href="about_us.html">About Us</a></li>
+ 				<li><a href="team.html">Team</a></li>	
+				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>	
+ 			</ul>
+		
+ 			<ul class="pull-right">		
+ 				<li class="dropdown">
+ 					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
+ 						  Contact Us<span class="caret"></span></a>				  
+ 					  <ul class="dropdown-menu">
+ 					    <li><a href="mailto:anavi.kajla@ashoka.edu.in,mihika.sood@ashoka.edu.in,paras.bhattrai@ashoka.edu.in">Email</a></li>
+ 					    <li><a href="#">Facebook</a></li>
+ 					    <li><a href="#">LinkedIn</a></li>
+ 					    <li><a href="#">Address</a></li> 
+ 					  </ul>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 	</div>
+	
+	<div class="header">
+		<p id="heading_top">Stack'd<p>
+	</div>
+	
+<p id="head1">Add a book to your Bookshelf</p>
+
+		
+			<form method="post"" class="block form-horizontal" enctype="multipart/form-data" action="<?php echo $_SERVER["PHP_SELF"];?>
+					<input type="text" name="isbn" align="middle" class="box" placeholder="ISBN"><br>
+					
+					<input type="text" name="bname" class="box" placeholder="Book Name" required><br>
+					
+					<input type="text" name="author" class="box" placeholder="Author" required><br>
+					
+					<input type="text" name="publisher" class="box" placeholder="Publisher"><br>
+					<input type="text" name="edition" class="box" placeholder="Edition" required><br><br>
+					
+					<p style="margin-left:33%">Is your book scribbled in?:</p>
+					<label class="radio-inline">
+					  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> Yes
+					</label>
+					<label class="radio-inline">
+					  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> No
+					</label><br>
+					
+					<input type="text" name="comment" id="comment_box" placeholder="Add some comments about the book"><br>
+					
+					<input type="hidden" name="MAX_FILE_SIZE" value="9000000">
+					
+					<input type="file" class="upload" name="upload1"><br>
+					
+					<input type="hidden" name="MAX_FILE_SIZE" value="9000000">
+					
+					<input type="file" class="upload" name="upload2"><br>
+					
+					<p style="margin-left:33%;">Check those that apply:</p>
+					<label class="checkbox-inline">
+					<input type="checkbox" id="inlineCheckbox1" name="Sell" class="check_box" value="Sell"><strong>Add to Sell</strong></label><br>
+					
+					<label class="checkbox-inline">
+					<input type="checkbox" name="Rent" class="check_box" id="inlineCheckbox2" value="Rent"><strong>Add to Rent Out</strong></label><br>
+					
+					<div style="margin-left:30%, position:absolute;vertical-align:middle;text-align:center; margin-bottom:0px">
+					    <button type="button" class="btn btn-primary" style="margin-left:30%, display:block, margin-top:1em, margin-bottom:0em">Submit</button> 
+					</div>​
+				</form>
+
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <!-- Include all compiled plugins (below), or include individual files as needed -->
+	    <script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
+</body>
