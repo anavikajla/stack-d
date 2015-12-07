@@ -26,7 +26,6 @@ session_start();
 		
  			<ul class="pull-right">
  				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>
- 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  				<li class="dropdown">
  					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
@@ -37,6 +36,7 @@ session_start();
  					    <li><a href="#">Address</a></li> 
  					  </ul>
  				</li>
+ 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  			</ul>
 					
  		</div>
@@ -71,34 +71,11 @@ session_start();
 		
 		</p>
 		
-		<p><strong>Scribbled in:</strong></p>
-		<label class="radio-inline">
-		  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked > Yes
-		</label>
-		<label class="radio-inline">
-		  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" > No
-		</label>
-		
-		<form>
-			<input type="text" name="sell" class="box" placeholder="Selling Price">	<input type="button" class="btn btn-primary" value="Sell">
-   	 	</form>
-		<form>
-			<input type="text" name="rent_out" class="box" placeholder="Renting Out Price">	<input type="button" class="btn btn-primary" value="Rent Out">
-		</form><br>
+		/*<p><strong>Scribbled in:</strong></p>
 		
 		<h4 style="color:grey">Notes</h4>
 		<p><strong>Notes attached:</strong></p><label class="radio-inline">
-		  <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked disabled> Yes
-		</label>
-		<label class="radio-inline">
-		  <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" disabled> No
-		</label>
-		<form>
-			<input type="text" name="sell" class="box" placeholder="Selling Price">	<input type="button" class="btn btn-primary" value="Sell Notes">
-   	 	</form>
-		<form>
-			<input type="text" name="rent_out" class="box" placeholder="Renting Out Price">	<input type="button" class="btn btn-primary" value="Rent Out Notes">
-		</form><br><br>
+		 /*link*/
 		
 	</div>
 </div>
