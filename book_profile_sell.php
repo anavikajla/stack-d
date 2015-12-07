@@ -52,6 +52,7 @@ session_start();
 	<div style="display:inline-block; vertical-align:right; margin-left:15%;">
 		<h2><strong><?php echo htmlspecialchars($_POST['book_name']);?></strong></h2>
 		<h4 style="color:grey"><?php echo htmlspecialchars($_POST['author']);?></h4>
+		<h4><strong>ISBN:</strong></h4>
 		<p><strong>Publisher:</strong><?php echo htmlspecialchars($_POST['subject']);?></p>
 		<p><strong>Edition:</strong><?php echo htmlspecialchars($_POST['edition']);?></p>
 		
@@ -71,10 +72,9 @@ session_start();
 		
 		</p>
 		
-		/*<p><strong>Scribbled in:</strong></p>
 		
 		<h4 style="color:grey">Notes</h4>
-		<p><strong>Notes attached:</strong></p><label class="radio-inline">
+		<p><strong>Notes attached:</strong></p>
 		 /*link*/
 		
 	</div>
