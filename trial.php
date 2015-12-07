@@ -9,7 +9,8 @@ session_start();
 		$author=$_POST['author'];
 		$subject=(!empty($_POST['publisher'])?$_POST['publisher']:'none');
 		$edition=(!empty($_POST['edition'])?$_POST['edition']:1);
-		@$rent=$_POST['rent'];
+		$rent=$_POST['rent'];
+		$sell=$_POST['sell'];
 		$new_file_name1='none';
 		$new_file_name2='none';
 		$file_name1='none';
@@ -21,14 +22,14 @@ session_start();
 		//uploading file
 		if(is_uploaded_file($_FILES['upload1']['tmp_name']))
 		{
-			echo "<br>file1";
+			//echo "<br>file1";
 			//renaming
 			$file_name1=$_FILES['upload1']['name'];
 			$random1=rand(000,999);
 			$new_file_name1=$random1.$file_name1;
 			
 			
-			if(move_uploaded_file($_FILES['upload1']['tmp_name'],"notes/{$new_file_name1}"))
+			if(move_uploaded_file($_FILES['upload1']['tmp_name'],"book_images/{$new_file_name1}"))
 			{
 					echo $new_file_name1;
 			}
@@ -38,7 +39,7 @@ session_start();
 		}
 		if(is_uploaded_file($_FILES['upload2']['tmp_name']))
 		{
-			echo "<br>file2";
+			//echo "<br>file2";
 			$file_name2=$_FILES['upload2']['name'];
 			$random2=rand(000,999);
 			$new_file_name2=$random2.$file_name2;
@@ -55,7 +56,7 @@ session_start();
 		
 		//connecting to db
 		$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","");
-			$insert=$db->prepare("INSERT INTO `book_sharing`.`books` (`db_user_id`, `isbn`, `book_name`, `author`, `subject`, `edition`,`rent`, `note_one`,`note_one_path`, `note_two`,`note_two_path`) VALUES ('{$_SESSION['db_user_id']}', '{$isbn}', '{$bname}', '{$author}', '{$subject}', '{$edition}','{$rent}', '{$file_name1}','{$random1}', '{$file_name2}','{$random2}');");
+			$insert=$db->prepare("INSERT INTO `book_sharing`.`books` (`db_user_id`, `isbn`, `book_name`, `author`, `subject`, `edition`,`rent`,`sell`, `note_one`,`note_one_path`, `note_two`,`note_two_path`) VALUES ('{$_SESSION['db_user_id']}', '{$isbn}', '{$bname}', '{$author}', '{$subject}', '{$edition}','{$rent}','{$sell}', '{$file_name1}','{$random1}', '{$file_name2}','{$random2}');");
 			$insert->execute();	
 		$db=null;
 		
@@ -96,8 +97,8 @@ session_start();
  		<div class="container">
  			<ul class="pull-left">
  				<li><a href="home.php">Home</a></li>
- 				<li><a href="about_us_h.html">About Us</a></li>
- 				<li><a href="team_h.html">Team</a></li>	
+ 				<li><a href="about_us.html">About Us</a></li>
+ 				<li><a href="team.html">Team</a></li>	
 				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>	
  			</ul>
 		
@@ -130,13 +131,16 @@ session_start();
 					<input type="text" name="author" class="box" placeholder="Author" required><br>
 					<input type="text" name="edition" class="box" placeholder="Edition"><br>
 					<input type="text" name="publisher" class="box" placeholder="Publisher"><br>
-					<input type="text" name="binding" class="box" placeholder="Binding"><br>
+					<input type="number" name="rent" class="box" placeholder="Rent at &#8377; (default is not for rent)" min="0"><br>
+					<input type="text" name="sell" class="box" placeholder="Sell At &#8377; (default is not for sale)" min="0"><br>
 					<input type="hidden" name="MAX_FILE_SIZE" value="9000000">
-					<input type="file" class="upload" name="upload1"><br>
+					<input type="file" class="upload" name="upload1" style="display:inline-block;"> Upload an image<br>
 					<input type="hidden" name="MAX_FILE_SIZE" value="9000000">
-					<input type="file" class="upload" name="upload2"><br>
+					<input type="file" class="upload" name="upload2" style="display:inline-block;"> Upload the notes<br>
+					<!--
 					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input style="text-align:center, vertical-align:middle" type="checkbox" id="inlineCheckbox1" name="Sell" class="check_box" value="Sell"><strong>Add to Sell</strong><br>
 					&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="checkbox" name="Rent" class="check_box" id="inlineCheckbox2" value="Rent"><strong>Add to Rent Out</strong><br>
+					-->
 					<div style="width:100%;height:100%;position:absolute;vertical-align:middle;text-align:center; margin-bottom:0px">
 					    <button name="submit" value="submit" type="submit" class="btn btn-primary" style="margin-left:auto;margin-right:auto;display:block;margin-top:1em;margin-bottom:0em">Submit</button> 
 					</div>​
