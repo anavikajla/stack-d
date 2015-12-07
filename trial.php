@@ -131,8 +131,8 @@ session_start();
 					<input type="text" name="author" class="box" placeholder="Author" required><br>
 					<input type="text" name="edition" class="box" placeholder="Edition"><br>
 					<input type="text" name="publisher" class="box" placeholder="Publisher"><br>
-					<input type="number" name="rent" class="box" placeholder="Rent at &#8377; (default is not for rent)" min="0"><br>
-					<input type="number" name="sell" class="box" placeholder="Sell At &#8377; (default is not for sale)" min="0"><br>
+					<input type="number" name="rent" class="box" placeholder="Rent at &#8377;" min="0"><br>
+					<input type="number" name="sell" class="box" placeholder="Sell At &#8377;" min="0"><br>
 					<input type="hidden" name="MAX_FILE_SIZE" value="9000000">
 					<input type="file" class="upload" name="upload1" style="display:inline-block;"> Upload an image<br>
 					<input type="hidden" name="MAX_FILE_SIZE" value="9000000">
