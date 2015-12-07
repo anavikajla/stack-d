@@ -20,12 +20,13 @@ session_start();
  		<div class="container">
  			<ul class="pull-left">
  				<li><a href="home.php">Home</a></li>
- 				<li><a href="about_us.html">About Us</a></li>
- 				<li><a href="team.html">Team</a></li>
+ 				<li><a href="about_us_h.html">About Us</a></li>
+ 				<li><a href="team_h.html">Team</a></li>
  			</ul>
 		
  			<ul class="pull-right">
- 				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>			
+ 				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>
+ 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  				<li class="dropdown">
  					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
@@ -37,7 +38,7 @@ session_start();
  					  </ul>
  				</li>
  			</ul>
-			<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>		
+					
  		</div>
  	</div>
 	
