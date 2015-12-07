@@ -1,7 +1,7 @@
 <?php
 	session_start();
 	if(isset($_POST['login'])){
-				$db=new PDO("mysql:host=localhost;dbname=book_sharing","root","");
+				$db=new PDO("mysql:host=localhost;dbname=book_sharing","root","server");
 		$uname=htmlspecialchars($_POST['uname']);
 		$upass=htmlspecialchars($_POST['upass']);
 		$upass=hash('sha512',$upass);
@@ -26,7 +26,7 @@
 	else if(isset($_POST['signup']))
 		{
 			//print_r($_POST);
-			$db=new PDO("mysql:host=localhost;dbname=book_sharing","root","");
+			$db=new PDO("mysql:host=localhost;dbname=book_sharing","root","server");
 			$sfirst=htmlspecialchars($_POST['sfirst']);
 			$slast=htmlspecialchars($_POST['slast']);
 			$semail=htmlspecialchars($_POST['semail']);
