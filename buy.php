@@ -75,6 +75,8 @@ session_start();
 						echo "<p><strong>Author:</strong><span name='author'>{$singlebook['author']}</span></p>";
 						echo "<p><strong>Publisher:</strong><span name='subject'>{$singlebook['subject']}</span></p>";
 						echo "<p><strong>Edition:</strong><span name='edition'>{$singlebook['edition']}</span></p>";
+						echo "<p><strong>Buying Price:</strong><span name='sell'>{$singlebook['sell']}</span></p>";
+						echo "<p><strong>Renting In Price:</strong><span name='rent'>{$singlebook['rent']}</span></p>";
 						//echo "<p><a href='' class='btn btn-primary' role='button'>Sell</a> <a href='' class='btn btn-default' role='button'>Rent Out</a></p>";
 						
 						echo "</div>";
