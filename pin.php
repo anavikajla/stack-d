@@ -71,7 +71,7 @@ session_start();
 						if($singlebook['note_one']!="none")
 						echo "<img src='book_images/{$singlebook['note_one_path']}{$singlebook['note_one']}' />";
 						else
-						echo "<img src='http://d28hgpri8am2if.cloudfront.net/book_images/cvr9780743482820_9780743482820_hr.jpg' />";
+						echo "<img src='http://www.islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg' />";
 						
 						echo "<h4 name='book_name'>{$singlebook['book_name']}</h4>";
 						echo "<p><strong>Author:</strong><span name='author'>{$singlebook['author']}</span></p>";
@@ -100,7 +100,7 @@ session_start();
 						if($singlebook['note_one']!="none")
 						echo "<input name='image' value='book_images/{$singlebook['note_one_path']}{$singlebook['note_one']}' hidden/>";
 						else
-						echo "<input name='image' value='http://d28hgpri8am2if.cloudfront.net/book_images/cvr9780743482820_9780743482820_hr.jpg' hidden/>";
+						echo "<input name='image' value='http://www.islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg' hidden/>";
 						//for notes
 						if($singlebook['note_two']!="none")
 						{
