@@ -42,8 +42,9 @@
  					    <li><a href="#">Address</a></li>
  						<li><a href="#">Contact Form</a></li> 
  					  </ul>
+ 				<li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
  				</li>
- 				 <li><form action="signout.php" method="post"><input type="submit" value="Sign out" style="display:inline-block;position:relative;float:right;"></form></li>
+ 				 
  			</ul>
  		</div>
  	</div>
@@ -64,8 +65,7 @@
 	<a href="trial.php"><button type="button" class="btn btn-info">Add to Bookshelf</button></a>
 	<a href="buy_search.html"><button type="button" class="btn btn-info">Buy/Rent</button></a>
 	
-	<button type="button" class="btn btn-info">Sell</button>
-	<button type="button" class="btn btn-info">Rent In</button>
+
 	
 </div>
 
