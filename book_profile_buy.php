@@ -73,7 +73,7 @@ session_start();
 				<?php
 				
 					//to produce user email
-					$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","server");
+					$db=new PDO("mysql:host=localhost;dbname=book_sharing;","stackd","server");
 					$select=$db->prepare("SELECT `db_user_id` FROM `book_sharing`.`books` where `book_name` LIKE '{$_POST['book_name']}' AND `author` LIKE '{$_POST['author']}' AND `subject` LIKE '{$_POST['subject']}';");
 					$select->execute();
 					$result=$select->fetch();

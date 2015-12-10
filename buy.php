@@ -55,7 +55,7 @@ session_start();
 	<div id="wrapper">
 	<div id="columns">
 <?php
-			$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","server");
+			$db=new PDO("mysql:host=localhost;dbname=book_sharing;","stackd","server");
 			if(isset($_POST['search']))
 			{	
 				//echo "<h3>SEARCH RESULTS</h3>";

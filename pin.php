@@ -58,7 +58,7 @@ session_start();
 		$sno=1;
 		$form_number=0;
 		
-		$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","server");
+		$db=new PDO("mysql:host=localhost;dbname=book_sharing;","stackd","server");
 			$select=$db->prepare("SELECT `isbn`,`book_name`,`author`,`subject`,`edition`,`rent`,`sell`,`note_one`,`note_one_path`,`note_two`,`note_two_path` FROM books WHERE `db_user_id`={$_SESSION['db_user_id']};");
 			$select->execute();
 			$mybooks=$select->fetchAll();

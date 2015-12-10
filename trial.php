@@ -61,7 +61,7 @@ session_start();
 		}
 		
 		//connecting to db
-		$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","server");
+		$db=new PDO("mysql:host=localhost;dbname=book_sharing;","stackd","server");
 			$insert=$db->prepare("INSERT INTO `book_sharing`.`books` (`db_user_id`, `isbn`, `book_name`, `author`, `subject`, `edition`,`rent`,`sell`, `note_one`,`note_one_path`, `note_two`,`note_two_path`) VALUES ('{$_SESSION['db_user_id']}', '{$isbn}', '{$bname}', '{$author}', '{$subject}', '{$edition}','{$rent}','{$sell}', '{$file_name1}','{$random1}', '{$file_name2}','{$random2}');");
 			$insert->execute();	
 		$db=null;

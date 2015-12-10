@@ -74,10 +74,13 @@ session_start();
 				
 					//to produce user email
 					$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","server");
-					$select=$db->prepare("SELECT `email` FROM `book_sharing`.`users` where `book_name` LIKE '{$_POST['book_name']}' AND `author` LIKE '{$_POST['author']}' AND `subject` LIKE '{$_POST['subject']}';");
+					$select=$db->prepare("SELECT `db_user_id` FROM `book_sharing`.`books` where `book_name` LIKE '{$_POST['book_name']}' AND `author` LIKE '{$_POST['author']}' AND `subject` LIKE '{$_POST['subject']}';");
 					$select->execute();
 					$result=$select->fetch();
-					echo $result[0];
+					$id=$db->prepare("SELECT `email` FROM `book_sharing`.`users` where `db_user_id`='{$result[0]}';");
+					$id->execute();
+					$spit_id=$id->fetch();
+					echo $spit_id[0];
 					$db=null;
 				?>
 		<br><br>

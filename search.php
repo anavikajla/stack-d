@@ -11,7 +11,7 @@ session_start();
 	header("Content-type:application/json");
 	
 	$term=$_GET['term'];
-	$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","server");
+	$db=new PDO("mysql:host=localhost;dbname=book_sharing;","stackd","server");
 	
 	//to fetch books
 	$select=$db->prepare("SELECT `book_name` FROM books WHERE `book_name` LIKE '{$term}%';");

@@ -55,7 +55,7 @@ session_start();
 	<div id="wrapper">
 	<div id="columns">
 <?php
-			$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","server");
+			$db=new PDO("mysql:host=localhost;dbname=book_sharing;","stackd","server");
 			if(isset($_POST['search']))
 			{	
 				//echo "<h3>SEARCH RESULTS</h3>";
@@ -70,7 +70,7 @@ session_start();
 						echo "<div class='pin' onclick='form_submit({$form_number});'>";
 						
 						//for image
-						echo "<img src='http://d28hgpri8am2if.cloudfront.net/book_images/cvr9780743482820_9780743482820_hr.jpg' />";
+						echo "<img src='http://www.islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg' />";
 						echo "<h1 name='book_name'>{$singlebook['book_name']}</h1>";
 						echo "<p><strong>Author:</strong><span name='author'>{$singlebook['author']}</span></p>";
 						echo "<p><strong>Publisher:</strong><span name='subject'>{$singlebook['subject']}</span></p>";
@@ -97,7 +97,7 @@ session_start();
 						echo "<input name='note' value='none' hidden/>";
 						
 						
-						echo	"<input name='image' value='http://d28hgpri8am2if.cloudfront.net/book_images/cvr9780743482820_9780743482820_hr.jpg' hidden>
+						echo	"<input name='image' value='http://www.islandpress.org/sites/default/files/400px%20x%20600px-r01BookNotPictured.jpg' hidden>
 							<input name='isbn' value='{$singlebook['isbn']}' hidden>
 							<input name='book_name' value='{$singlebook['book_name']}' hidden>
 							<input name='rent' value='{$singlebook['rent']}' hidden>

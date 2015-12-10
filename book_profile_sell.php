@@ -69,7 +69,7 @@ session_start();
 				<?php
 				
 					//to produce user email
-					$db=new PDO("mysql:host=localhost;dbname=book_sharing;","root","");
+					$db=new PDO("mysql:host=localhost;dbname=book_sharing;","stackd","server");
 					$select=$db->prepare("SELECT `email` FROM `book_sharing`.`users` where `db_user_id`={$_SESSION['db_user_id']};");
 					$select->execute();
 					$result=$select->fetch();
