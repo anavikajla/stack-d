@@ -24,7 +24,16 @@ session_start();
 		$random1=null;
 		$random2=null;
 		
-		
+		function error($error_code)
+		{
+			switch($error_code)
+			{
+				case 1:echo "<br>File size greater than system allows";break;
+				case 2:echo "<br>file greater than form allows";break;
+				case 3:echo "<br>Only a part of the file was uploaded";break;
+				case 4:echo "<br>No file upload";
+			}
+		}
 		//uploading file
 		if(is_uploaded_file($_FILES['upload1']['tmp_name']))
 		{
@@ -70,16 +79,7 @@ session_start();
 		echo "<br><br>";
 		//print_r($_POST);
 		//reporting error for file upload
-		function error($error_code)
-		{
-			switch($error_code)
-			{
-				case 1:echo "<br>File size greater than system allows";break;
-				case 2:echo "<br>file greater than form allows";break;
-				case 3:echo "<br>Only a part of the file was uploaded";break;
-				case 4:echo "<br>No file upload";
-			}
-		}
+		
 	}
 	
 

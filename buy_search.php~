@@ -1,3 +1,11 @@
+<?php
+session_start();
+ if(!isset($_SESSION['db_user_id']))
+ {
+	header('Location: login_page.php');
+	exit;
+ }	
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -25,7 +33,7 @@
  			</ul>
 		
  			<ul class="pull-right">
- 				<li><a href="login_page.html">Login/Sign-Up</a></li>			
+ 				
  				<li class="dropdown">
  					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  

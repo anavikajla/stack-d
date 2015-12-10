@@ -26,14 +26,14 @@ session_start();
  	<div class="nav">
  		<div class="container">
  			<ul class="pull-left">
- 				<li><a href="page_one.html">Home</a></li>
+ 				<li><a href="home.php">Home</a></li>
  				<li><a href="about_us_h.html">About Us</a></li>
  				<li><a href="team_h.html">Team</a></li>	
 				<li><a href="https://mihikasood.typeform.com/to/wuNSlj">Feedback Form</a></li>	
  			</ul>
 		
  			<ul class="pull-right">
- 				<li><a href="login_page.html">Login/Sign-Up</a></li>			
+ 				
  				<li class="dropdown">
  					  <a class="dropdown-toggle" data-toggle="dropdown" href="#" aria-expanded="true">
  						  Contact Us<span class="caret"></span></a>				  
